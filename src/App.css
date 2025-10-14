@@ -1,24 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@utility gradient-text {
-  background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(113,113,122,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(113, 113, 122, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-@utility gradient-text-light {
-  background: linear-gradient(135deg, rgba(244,244,245,1) 0%, rgba(82,82,91,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+  .gradient-text-light {
+    background: linear-gradient(
+      135deg,
+      rgba(244, 244, 245, 1) 0%,
+      rgba(82, 82, 91, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
 
-@utility glass-card {
-  background-color: rgba(24, 24, 27, 0.5);
-  border: 1px solid rgba(244, 244, 245, 0.1);
-  backdrop-filter: blur(10px);
+  .glass-card {
+    background-color: rgba(24, 24, 27, 0.5);
+    border: 1px solid rgba(244, 244, 245, 0.1);
+    backdrop-filter: blur(10px);
+  }
 }
 
 body {
